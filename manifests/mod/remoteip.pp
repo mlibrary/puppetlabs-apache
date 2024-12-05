@@ -74,7 +74,7 @@ class apache::mod::remoteip (
   }
 
   if $proxy_ips {
-    deprecation('apache::mod::remoteip::proxy_ips', 'This parameter is deprecated, please use `internal_proxy`.')
+    # deprecation('apache::mod::remoteip::proxy_ips', 'This parameter is deprecated, please use `internal_proxy`.')
     $_internal_proxy = $proxy_ips
   } elsif $internal_proxy {
     $_internal_proxy = $internal_proxy
@@ -83,7 +83,7 @@ class apache::mod::remoteip (
   }
 
   if $trusted_proxy_ips {
-    deprecation('apache::mod::remoteip::trusted_proxy_ips', 'This parameter is deprecated, please use `trusted_proxy`.')
+    # deprecation('apache::mod::remoteip::trusted_proxy_ips', 'This parameter is deprecated, please use `trusted_proxy`.')
     $_trusted_proxy = $trusted_proxy_ips
   } else {
     $_trusted_proxy = $trusted_proxy
